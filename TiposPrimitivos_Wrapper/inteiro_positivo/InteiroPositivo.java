@@ -1,17 +1,17 @@
 public class InteiroPositivo {
     private int valor;
-    private int cont;
+    int cont;
 
-    public InteiroPositivo(int valor) throws Exception {
+    public InteiroPositivo(int valor) {
         if (valor < 0) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
         this.valor = valor;
     }
-    public InteiroPositivo(String valor) throws Exception {
-        Integer valor_int = new Integer(valor);
+    public InteiroPositivo(String valor) {
+        int valor_int = Integer.parseInt(valor);
         if (valor_int < 0) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
         this.valor = valor_int;
     }
@@ -20,9 +20,9 @@ public class InteiroPositivo {
         return valor;
     }
 
-    public void setValor(int valor) throws Exception{
+    public void setValor(int valor) {
         if (valor < 0) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
         this.valor = valor;
     }
