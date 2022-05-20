@@ -29,6 +29,6 @@ public class Personagem {
     }
     @Override
     public String toString(){
-        return this.pontosDeFelicidade+" "+obterHumorAtual().getClass().getSimpleName();
+        return this.pontosDeFelicidade+" - "+obterHumorAtual().getClass().getSimpleName();
     }
 }

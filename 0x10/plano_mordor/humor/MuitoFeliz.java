@@ -1,5 +1,5 @@
 package humor;
 
-public class MuitoFeliz extends  Humor {
+public class MuitoFeliz extends Humor {
 
 }
