@@ -28,7 +28,7 @@ public class Pedido {
         for (ItemPedido item: this.itens) {
             totalItem = item.getQuantidade()*item.getProduto().obterPrecoLiquido();
             totalPedido+= totalItem;
-            String textoItem = String.format("Tipo: %s Titulo: %s Preco: %.2f Quant: %d Total: %.2f", item.getProduto().getClass().getSimpleName(),
+            String textoItem = String.format("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f", item.getProduto().getClass().getSimpleName(),
                     item.getProduto().getTitulo(), item.getProduto().obterPrecoLiquido(), item.getQuantidade(), totalItem);
             System.out.println(textoItem);
         }
