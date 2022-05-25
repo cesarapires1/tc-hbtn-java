@@ -1,12 +1,7 @@
-import java.util.Locale;
 
 public class Pedido {
     private double percentualDesconto;
     private ItemPedido[] itens;
-
-    final var localeEUA = new Locale("pt ", "BR");
-    NumberFormat decimalFormat = NumberFormat.getNumberInstance(localeEUA);
-    decimalFormat.setMaximumFractionDigits(2);
 
     public Pedido(double percentualDesconto, ItemPedido[] itens) {
         this.percentualDesconto = percentualDesconto/100;
@@ -36,16 +31,16 @@ public class Pedido {
             totalPedido+= totalItem;
             String textoItem = String.format("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f", item.getProduto().getClass().getSimpleName(),
                     item.getProduto().getTitulo(), 
-                    decimalFormat.format(item.getProduto().obterPrecoLiquido()), 
+                    item.getProduto().obterPrecoLiquido(),
                     item.getQuantidade(), 
-                    decimalFormat.format(totalItem));
+                    totalItem);
             System.out.println(textoItem);
         }
         System.out.println("----------------------------");
-        System.out.println(String.format("DESCONTO: %.2f", decimalFormat.format(this.calcularDesconto())));
-        System.out.println(String.format("TOTAL PRODUTOS: %.2f", decimalFormat.format(this.calcularTotal())));
+        System.out.println(String.format("DESCONTO: %.2f", this.calcularDesconto()));
+        System.out.println(String.format("TOTAL PRODUTOS: %.2f", this.calcularTotal()));
         System.out.println("----------------------------");
-        System.out.println(String.format("TOTAL PEDIDO: %.2f", decimalFormat.format(this.calcularTotal() - this.calcularDesconto())));
+        System.out.println(String.format("TOTAL PEDIDO: %.2f", this.calcularTotal() - this.calcularDesconto()));
         System.out.println("----------------------------");
     }
 }
