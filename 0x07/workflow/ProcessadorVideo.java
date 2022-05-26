@@ -8,7 +8,7 @@ public class ProcessadorVideo {
 
     public void processar(Video video) {
         for (CanalNotificacao canal: this.canais) {
-            System.out.print("["+canal.getClass().getName()+"] {LOG} - "+video.getArquivo()+" "+video.getFormato()+"\n");
+            System.out.print("["+canal.getClass().getName()+"] {LOG} - "+video.getArquivo()+" - "+video.getFormato()+"\n");
         }
 
     }
