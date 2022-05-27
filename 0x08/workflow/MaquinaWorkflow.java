@@ -1,4 +1,4 @@
-import Atividades.*;
+import atividades.*;
 
 public class MaquinaWorkflow {
     public void executar(Workflow workflow) {
