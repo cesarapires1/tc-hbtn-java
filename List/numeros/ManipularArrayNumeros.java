@@ -4,14 +4,14 @@ public class ManipularArrayNumeros {
 
     static public void adicionarNumero(List numeros, Integer i) {
         if (buscarPosicaoNumero(numeros, i) != -1) {
-            throw new Exception("Numero jah contido na lista");
+            throw new IllegalArgumentException("Numero jah contido na lista");
         }
         numeros.add(i);
     }
 
     static public void removerNumero(List numeros, Integer i){
         if (buscarPosicaoNumero(numeros, i) == -1) {
-            throw new Exception("Numero nao encontrado na lista");
+            throw new IllegalArgumentException("Numero nao encontrado na lista");
         }
         numeros.remove(i);
     }
