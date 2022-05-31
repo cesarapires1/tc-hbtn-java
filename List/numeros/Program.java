@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         List<Integer> numeros = new ArrayList<Integer>();
 
         ManipularArrayNumeros.adicionarNumero(numeros, 1);
