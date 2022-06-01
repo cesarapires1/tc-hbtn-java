@@ -48,7 +48,7 @@ public class Banco {
             ArrayList<Cliente> clientes = agencia.getClientes();
             int contatorCliente = 1;
             for (Cliente cliente : clientes) {
-                System.out.println("Cliente: "+cliente.getNome()+"["+contatorCliente+"]");
+                System.out.println("Cliente: "+cliente.getNome()+" ["+contatorCliente+"]");
                 if (imprimeTransacao) {
                     ArrayList<Double> transacoes = cliente.getTransacoes();
                     int contadorTransacoes = 1;
