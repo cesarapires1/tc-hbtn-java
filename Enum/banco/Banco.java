@@ -53,7 +53,7 @@ public class Banco {
                     ArrayList<Double> transacoes = cliente.getTransacoes();
                     int contadorTransacoes = 1;
                     for (Double transacao : transacoes) {
-                        System.out.println("["+contadorTransacoes+"] valor "+transacao);
+                        System.out.println("  ["+contadorTransacoes+"] valor "+transacao);
                         contadorTransacoes++;
                     }
                 }
