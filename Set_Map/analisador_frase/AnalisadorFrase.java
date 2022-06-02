@@ -3,7 +3,7 @@ import java.util.*;
 
 public class AnalisadorFrase {
 
-    public static TreeMap contagemPalavras(String frase){
+    public static TreeMap<String, Integer> contagemPalavras(String frase){
         ArrayList<String> listaFrase = new ArrayList<String>(Arrays.asList(frase.split(" ")));
         TreeMap<String, Integer> contadorPalavras = new TreeMap<String, Integer>();
 
