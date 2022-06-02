@@ -2,7 +2,7 @@ import java.util.*;
 
 public class NumerosDuplicados {
     public static TreeSet<Integer> buscar(int[] ints) {
-
+        HashSet<Integer> verificador = new HashSet<>();
         TreeSet<Integer> verificadorNumeros = new TreeSet<>();
         List<Integer> verificadorDuplicados = new ArrayList<Integer>();
 
@@ -20,9 +20,11 @@ public class NumerosDuplicados {
                 }
 
                 if (ocorrencia >= 2) {
-                    verificadorNumeros.add(numeroPrincipal);
+                    verificador.add(numeroPrincipal);
                 }
         }
+
+        verificadorNumeros.addAll(verificador);
 
         return verificadorNumeros;
     }
