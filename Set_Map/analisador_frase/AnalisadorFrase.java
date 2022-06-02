@@ -10,7 +10,7 @@ public class AnalisadorFrase {
         for(String palavraCompleta : listaFrase){
             String palavraFinal = palavraCompleta.replaceAll("[\\s\\.\\?\\!]", "").toLowerCase();
             if (contadorPalavras.containsKey(palavraFinal)) {
-                int quantidadePalavras = contadorPalavras.get(palavraFinal) + 1;
+                Integer quantidadePalavras = contadorPalavras.get(palavraFinal) + 1;
                 contadorPalavras.put(palavraFinal, quantidadePalavras);
             } else {
                 contadorPalavras.put(palavraFinal, 1);
