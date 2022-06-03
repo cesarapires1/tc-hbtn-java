@@ -31,7 +31,9 @@ public class Telefone {
 
     @Override
     public int hashCode(){
-        return toString().charAt(0);
+        int hash = 5;
+        hash = hash + toString().hashCode();
+        return hash;
     }
 
     public boolean equals(Object obj) {
