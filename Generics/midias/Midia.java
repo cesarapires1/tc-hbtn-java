@@ -1,5 +1,5 @@
 public class Midia {
-    private String nome;
+    protected String nome;
 
     public Midia(String nome) {
         this.nome = nome;
