@@ -1,8 +1,8 @@
 public class Livro extends Midia {
-    protected int quantidadeArtigos;
+    protected int edicao;
 
-    public Livro(String nome, int quantidadeArtigos) {
+    public Livro(String nome, int edicao) {
         super(nome);
-        this.quantidadeArtigos = quantidadeArtigos;
+        this.edicao = edicao;
     }
 }

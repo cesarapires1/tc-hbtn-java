@@ -1,8 +1,8 @@
 public class Video extends Midia {
-    protected int edicao;
+    protected int duracao;
 
-    public Video(String nome, int edicao) {
+    public Video(String nome, int duracao) {
         super(nome);
-        this.edicao = edicao;
+        this.duracao = duracao;
     }
 }
