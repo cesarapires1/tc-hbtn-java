@@ -1,5 +1,5 @@
 public class Jornal extends Midia{
-    int duracao;
+    private int duracao;
 
     public Jornal(String nome, int duracao) {
         super(nome);

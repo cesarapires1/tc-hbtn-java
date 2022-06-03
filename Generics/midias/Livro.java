@@ -1,5 +1,5 @@
 public class Livro extends Midia {
-    int quantidadeArtigos;
+    private int quantidadeArtigos;
 
     public Livro(String nome, int quantidadeArtigos) {
         super(nome);

@@ -1,5 +1,5 @@
 public class Video extends Midia {
-    int edicao;
+    private int edicao;
 
     public Video(String nome, int edicao) {
         super(nome);
