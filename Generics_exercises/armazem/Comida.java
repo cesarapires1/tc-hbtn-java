@@ -1,6 +1,6 @@
 public class Comida {
     private String nome;
-    private int calorias;
+    private double calorias;
     private double preco;
 
     public Comida(String nome, int calorias, double preco) {
@@ -12,7 +12,7 @@ public class Comida {
     @Override
     public String toString() {
         String textoFormatado;
-        textoFormatado = "["+this.nome+"] "+this.calorias+" R$ "+this.preco;
+        textoFormatado = String.format("["+this.nome+"] %.6f R$ %.6f",this.calorias, this.preco);
         return textoFormatado;
     }
 }
