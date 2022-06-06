@@ -12,7 +12,7 @@ public class Comida {
     @Override
     public String toString() {
         String textoFormatado;
-        textoFormatado = String.format("["+this.nome+"] "+this.calorias+" R$ "+this.preco);
+        textoFormatado = "["+this.nome+"] "+this.calorias+" R$ "+this.preco;
         return textoFormatado;
     }
 }

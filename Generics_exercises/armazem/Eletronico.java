@@ -9,7 +9,7 @@ public class Eletronico {
 
     public String toString() {
         String textoFormatado;
-        textoFormatado = String.format("["+this.descricao+"] R$ "+this.valor);
+        textoFormatado = "["+this.descricao+"] R$ "+this.valor;
         return textoFormatado;
     }
 }
