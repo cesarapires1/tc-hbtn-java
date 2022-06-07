@@ -1,9 +1,16 @@
 import java.util.*;
 
 public class Blog {
-    List<Post> postagem = new ArrayList<Post>();
+    private List<Post> postagem = new ArrayList<Post>();
 
     public void adicionarPostagem(Post postagem) {
+        Set<Post> postagens = obterPostsPorAutor(postagem.getAutor());
+        for (Post posts : postagens) {
+            if (posts.getTitulo().equals(postagem.getTitulo())) {
+                throw new IllegalArgumentException("Postagem jah existente");
+
+            }
+        }
         this.postagem.add(postagem);
     }
 
