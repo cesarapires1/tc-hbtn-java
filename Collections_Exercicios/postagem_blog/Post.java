@@ -58,10 +58,7 @@ public class Post implements Comparable<Post> {
     }
 
     public int compareTo(Post post) {
-        if (!this.toString().equals(post.toString())) {
-            return 1;
-        }
-        return 0;
+        return this.toString().compareTo(post.toString());
     }
 
 }

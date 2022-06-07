@@ -36,7 +36,7 @@ public class Blog {
     }
 
     public Set<Post> obterPostsPorAutor(Autor autor) {
-        Set<Post> postagemAutor = new HashSet<>();
+        Set<Post> postagemAutor = new TreeSet<>();
         for (Post post : postagem) {
             if (post.getAutor().toString().equals(autor.toString())) {
                 postagemAutor.add(post);
@@ -46,7 +46,7 @@ public class Blog {
     }
 
     public Set<Post> obterPostsPorCategoria(Categorias categoria) {
-        Set<Post> postagemCategoria = new HashSet<>();
+        Set<Post> postagemCategoria = new TreeSet<>();
         for (Post post : postagem) {
             if (post.getCategoria().getDescricao().equals(categoria.getDescricao())) {
                 postagemCategoria.add(post);

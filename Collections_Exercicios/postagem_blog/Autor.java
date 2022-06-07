@@ -18,10 +18,7 @@ public class Autor implements Comparable<Autor>{
     }
 
     public int compareTo(Autor autor) {
-        if (!this.toString().equals(autor.toString())) {
-            return 1;
-        }
-        return 0;
+        return this.toString().compareTo(autor.toString());
     }
 
 }
