@@ -1,7 +1,11 @@
 import java.util.*;
 
 public class Blog {
-    List<Post> postagens = new ArrayList<Post>();
+    List<Post> postagens;
+
+    public Blog(){
+        this.postagens = new ArrayList<Post>();
+    }
 
     public void adicionarPostagem(Post postagem) {
         this.postagens.add(postagem);
