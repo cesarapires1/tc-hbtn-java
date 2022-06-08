@@ -37,17 +37,17 @@ public class ContaBancariaBasica {
 
     public void depositar(double valor) throws OperacaoInvalidaException {
         if (valor <= 0) {
-            throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0\n");
+            throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
         }
         setSaldo(getSaldo() + valor);
     }
 
     public void sacar(double valor) throws OperacaoInvalidaException {
         if (valor <= 0) {
-            throw new OperacaoInvalidaException("Valor de saque deve ser menor que 0\n");
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que 0");
         }
         if (valor > getSaldo()) {
-            throw new OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual\n");
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual");
         }
         setSaldo(getSaldo() - valor);
     }
