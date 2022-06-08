@@ -1,11 +1,11 @@
 public class ContaBancariaControlada extends ContaBancariaBasica {
     private double saldoMinimo;
-    private double valorPenaldiade;
+    private double valorPenalidade;
 
-    public ContaBancariaControlada(String numeraco, double taxaJurosAnual, double saldoMinimo, double valorPenaldiade) {
+    public ContaBancariaControlada(String numeraco, double taxaJurosAnual, double saldoMinimo, double valorPenalidade) {
         super(numeraco, taxaJurosAnual);
         setSaldoMinimo(saldoMinimo);
-        setValorPenaldiade(valorPenaldiade);
+        setvalorPenalidade(valorPenalidade);
     }
 
     public double getSaldoMinimo() {
@@ -16,18 +16,18 @@ public class ContaBancariaControlada extends ContaBancariaBasica {
         this.saldoMinimo = saldoMinimo;
     }
 
-    public double getValorPenaldiade() {
-        return valorPenaldiade;
+    public double getvalorPenalidade() {
+        return valorPenalidade;
     }
 
-    public void setValorPenaldiade(double valorPenaldiade) {
-        this.valorPenaldiade = valorPenaldiade;
+    public void setvalorPenalidade(double valorPenalidade) {
+        this.valorPenalidade = valorPenalidade;
     }
 
     @Override
     public void aplicarAtualizacaoMensal() {
         if (getSaldo() <= getSaldoMinimo()) {
-            setSaldo(getSaldo()-calcularTarifaMensal()+calcularJurosMensal()-getValorPenaldiade());
+            setSaldo(getSaldo()-calcularTarifaMensal()+calcularJurosMensal()-getvalorPenalidade());
         } else {
             setSaldo(getSaldo()-calcularTarifaMensal()+calcularJurosMensal());
         }
