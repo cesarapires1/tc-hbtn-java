@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
+        Locale.setDefault(new Locale("pt", "BR"));
         Blog blog1 = new Blog();
 
         Post post1 = new Post("John Bannons",
