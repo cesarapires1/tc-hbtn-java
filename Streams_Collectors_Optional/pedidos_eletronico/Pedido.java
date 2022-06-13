@@ -27,7 +27,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        String string = String.format("[%d] %s ", getCodigo(), getCliente().getNome());
+        String string = String.format("[%d] %s", getCodigo(), getCliente().getNome());
         return string;
     }
 }
