@@ -38,7 +38,7 @@ public class Pessoa implements Comparable<Pessoa> {
     @Override
     public String toString() {
         String string;
-        string = String.format("[%d] %s %s %d R$ %.2f", getCodigo(), getNome(), getCargo(), getIdade(), getSalario());
+        string = String.format("[%d] %s %s %d R$ %.6f", getCodigo(), getNome(), getCargo(), getIdade(), getSalario());
         return string;
     }
 
